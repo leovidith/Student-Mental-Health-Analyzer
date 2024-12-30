@@ -1,5 +1,5 @@
-[# Student Mental Health Analyzer](https://student-mental-health-analyzer.onrender.com/)
-
+# Student Mental Health Analyzer
+Deployment Status: https://student-mental-health-analyzer.onrender.com/
 ## Overview
 
 The **Student Mental Health Analyzer** is a web-based application designed to assess the mental health status of students using machine learning. By entering details such as gender, age, course, CGPA, marital status, anxiety, panic attack history, and treatment, the system predicts whether a student is likely to experience depression.
