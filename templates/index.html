@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mental Health Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Mental Health Prediction</h1>
+            <p>Enter your details below to predict your mental health status.</p>
+        </header>
+
+        <form id="predictionForm" method="POST" action="/predict">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" name="course" required>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Islamic Education">Islamic Education</option>
+                    <option value="BIT">BIT</option>
+                    <option value="Law">Law</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cgpa">CGPA</label>
+                <input type="text" id="cgpa" name="cgpa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year of Study</label>
+                <input type="number" id="year" name="year" required>
+            </div>
+
+            <div class="form-group">
+                <label for="maritalStatus">Marital Status</label>
+                <select id="maritalStatus" name="maritalStatus" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="depression">Depression</label>
+                <select id="depression" name="depression" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="anxiety">Anxiety</label>
+                <select id="anxiety" name="anxiety" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="panicAttack">Panic Attack</label>
+                <select id="panicAttack" name="panicAttack" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="treatment">Treatment</label>
+                <select id="treatment" name="treatment" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="predictButton">Predict</button>
+            </div>
+        </form>
+
+        <div id="predictionResult" class="result">
+            <h3>Prediction Result:</h3>
+            <p id="resultText">Your mental health status will be displayed here.</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
